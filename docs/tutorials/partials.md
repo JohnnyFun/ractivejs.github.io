@@ -164,7 +164,7 @@ Perhaps that's a bit better, but it's not very expandable _or_ pretty. As it tur
 {{> `${.type}-name`}}
 ```
 
-> When the expression evaluates, it will return a string, which will then be used to look up the appropriate partial in the registry. Partials check for a matching name before evaluating as an expression, so if you an expression that could also be a valid partial name, the partial name will be picked rather that the result of evaluating the expression. For example with partials named `user` and `larry` and a property `user: 'larry'`, `{{>user}}` will use the `user` partial rather than the `larry` partial.
+> When the expression evaluates, it will return a string, which will then be used to look up the appropriate partial in the registry. Partials check for a matching name before evaluating as an expression, so if you have an expression that could also be a valid partial name, the partial name will be picked rather that the result of evaluating the expression. For example with partials named `user` and `larry` and a property `user: 'larry'`, `{{>user}}` will use the `user` partial rather than the `larry` partial.
 
 Now when it turns out that we need to also keep up with buildings, that for our purposes include a street address in their name, we can do so easily by adding a new partial named `building-name`:
 
@@ -172,4 +172,4 @@ Now when it turns out that we need to also keep up with buildings, that for our 
 {{.name}}, {{.address}}
 ```
 
-I think that contrivance has snapped, possibly in more than one place, but hopefully it was served its purpose.
+I think that contrivance has snapped, possibly in more than one place, but hopefully it has served its purpose.
